@@ -4,6 +4,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
 import model.EmployeeHistory;
@@ -175,13 +176,18 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addGap(11, 11, 11)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTeamInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPositionTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(235, 235, 235))
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(214, 214, 214))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtAge, txtEmployeeID, txtGender, txtName, txtStartDate});
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtEmail, txtLevel, txtPhoneNumber, txtPositionTitle, txtTeamInfo});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -243,6 +249,11 @@ public class ViewJPanel extends javax.swing.JPanel {
         );
 
         btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -263,7 +274,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
-                .addContainerGap(139, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnDelete, btnView});
@@ -290,6 +301,27 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
+         int selectedRowIndex = tblEmployees.getSelectedRow();
+       
+       if(selectedRowIndex<0)
+       {
+           JOptionPane.showMessageDialog(this, "Please select row to View,");
+           return;
+       }
+       DefaultTableModel model=(DefaultTableModel)tblEmployees.getModel();
+       Employee selectedEmployee=(Employee)model.getValueAt(selectedRowIndex, 0);
+        
+      txtName.setText(selectedEmployee.getName());
+      txtEmployeeID.setText(String.valueOf(selectedEmployee.getEmpId()));
+      txtAge.setText(String.valueOf(selectedEmployee.getAge()));
+      txtGender.setText(selectedEmployee.getGender());
+      txtStartDate.setText(selectedEmployee.getStartDate());
+      txtLevel.setText(String.valueOf(selectedEmployee.getLevel()));
+      txtTeamInfo.setText(selectedEmployee.getTeamInfo());
+      txtPositionTitle.setText(selectedEmployee.getPositionTitle());
+      txtPhoneNumber.setText(String.valueOf(selectedEmployee.getPhoneNumber()));
+      txtEmail.setText(selectedEmployee.getEmail());
+       populateTable();
     }//GEN-LAST:event_btnViewActionPerformed
 
     private void txtEmployeeIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmployeeIDActionPerformed
@@ -299,6 +331,25 @@ public class ViewJPanel extends javax.swing.JPanel {
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+       int selectedRowIndex = tblEmployees.getSelectedRow();
+       
+       if(selectedRowIndex<0)
+       {
+           JOptionPane.showMessageDialog(this, "Please select row to delete,");
+           return;
+       }
+       DefaultTableModel model=(DefaultTableModel)tblEmployees.getModel();
+       Employee selectedEmployee=(Employee)model.getValueAt(selectedRowIndex, 0);
+        
+       history.deleteEmpoyees(selectedEmployee);
+       
+       JOptionPane.showMessageDialog(this, "Employee is deleted");
+       populateTable();
+       
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -336,7 +387,7 @@ private void populateTable(){
     for(Employee em:history.getHistory())
     {
         Object [] row=new Object[10];
-        row[0]=em.getName();
+        row[0]=em;
         row[1]=em.getEmpId();
         row[2]=em.getAge();
         row[3]=em.getGender();

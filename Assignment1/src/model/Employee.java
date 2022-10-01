@@ -29,6 +29,10 @@ public class Employee {
         this.name = name;
     }
 
+    @Override
+    public String toString(){
+        return name;
+    }
     public int getEmpId() {
         return empId;
     }
@@ -105,6 +109,6 @@ public class Employee {
         this.email = email;
     }
     
-    
+  
     
 }

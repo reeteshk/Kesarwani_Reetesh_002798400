@@ -34,7 +34,7 @@
                   <Component id="jPanel1" max="32767" attributes="0"/>
                   <Component id="jScrollPane1" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="139" max="32767" attributes="0"/>
+              <EmptySpace pref="125" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -174,28 +174,28 @@
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="lblStartDate" min="-2" pref="63" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                          <Component id="txtStartDate" min="-2" pref="88" max="-2" attributes="0"/>
+                          <Component id="txtStartDate" linkSize="3" min="-2" pref="88" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" alignment="1" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="lblGender" pref="57" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
-                              <Component id="txtGender" min="-2" pref="96" max="-2" attributes="0"/>
+                              <Component id="txtGender" linkSize="3" min="-2" pref="96" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="lblAge" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="txtAge" min="-2" pref="88" max="-2" attributes="0"/>
+                              <Component id="txtAge" linkSize="3" min="-2" pref="88" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="lblEmployeeID" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                              <Component id="txtEmployeeID" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="txtEmployeeID" linkSize="3" min="-2" pref="89" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="lblName" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                              <Component id="txtName" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Component id="txtName" linkSize="3" min="-2" pref="110" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -219,13 +219,13 @@
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtLevel" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                      <Component id="txtTeamInfo" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                      <Component id="txtPositionTitle" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                      <Component id="txtPhoneNumber" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
-                      <Component id="txtEmail" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                      <Component id="txtTeamInfo" linkSize="4" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                      <Component id="txtPositionTitle" linkSize="4" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                      <Component id="txtPhoneNumber" linkSize="4" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                      <Component id="txtEmail" linkSize="4" alignment="0" min="-2" pref="74" max="-2" attributes="0"/>
+                      <Component id="txtLevel" linkSize="4" min="-2" pref="95" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="214" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -417,6 +417,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
