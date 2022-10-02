@@ -20,6 +20,9 @@ public class Employee {
     private String positionTitle;
     private int phoneNumber;
     private String email;
+    private String photo;
+
+
 
     public String getName() {
         return name;
@@ -109,6 +112,12 @@ public class Employee {
         this.email = email;
     }
     
-  
+      public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
     
 }
