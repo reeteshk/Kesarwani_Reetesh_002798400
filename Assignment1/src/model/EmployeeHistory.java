@@ -26,13 +26,30 @@ public class EmployeeHistory {
         this.history = history;
     }
     
-    public Employee addNewEmployee(){
-        Employee newEmployee=new Employee();
+    public void addNewEmployee(String name,int empId,int age,String gender,String startDate,
+             int level,String teamInfo,String positionTitle,String phoneNumber,String email,String photo){
+        Employee newEmployee=new Employee(name,empId,age,gender,startDate,
+             level,teamInfo,positionTitle,phoneNumber,email,photo);
         history.add(newEmployee);
-        return newEmployee;
     }
-    public void deleteEmpoyees(Employee employee)
+    
+    public void deleteEmpoyees(String name)
     {
-        history.remove(employee);
+        for(Employee em : history){
+            if(em.getName() == name){
+                history.remove(em);
+                break;
+            }
+        }
+    }
+    
+    public Employee getEmployee(String name)
+    {
+        for(Employee em : history){
+            if(em.getName() == name){
+                return em;
+            }
+        }
+        return null;
     }
 }

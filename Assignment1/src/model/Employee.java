@@ -18,9 +18,29 @@ public class Employee {
     private int level;
     private String teamInfo;
     private String positionTitle;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
     private String photo;
+    
+    public Employee(String name,int empId,int age,String gender,String startDate,
+             int level,String teamInfo,String positionTitle,String phoneNumber,String email,String photo){
+        
+        this.name = name;
+        this.empId = empId;
+        this.age = age;
+        this.gender = gender;
+        this.startDate = startDate;
+        this.level = level;
+        this.teamInfo = teamInfo;
+        this.positionTitle = positionTitle;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.photo = photo;
+        
+        
+        
+        
+    }
 
 
 
@@ -32,10 +52,6 @@ public class Employee {
         this.name = name;
     }
 
-    @Override
-    public String toString(){
-        return name;
-    }
     public int getEmpId() {
         return empId;
     }
@@ -94,13 +110,15 @@ public class Employee {
         this.positionTitle = positionTitle;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+
 
   
 
