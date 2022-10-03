@@ -52,4 +52,26 @@ public class EmployeeHistory {
         }
         return null;
     }
+    
+    public ArrayList<Employee> filterbyid(int id)
+    {
+        ArrayList<Employee> emps = new ArrayList<>();
+        for(Employee em : history){
+            if(em.getEmpId() == id){
+                emps.add(em);
+            }
+        }
+        return emps;
+    }
+    
+    public ArrayList<Employee> filterbylevel(int level)
+    {
+        ArrayList<Employee> emps = new ArrayList<>();
+        for(Employee em : history){
+            if(em.getLevel() == level){
+                emps.add(em);
+            }
+        }
+        return emps;
+    }
 }

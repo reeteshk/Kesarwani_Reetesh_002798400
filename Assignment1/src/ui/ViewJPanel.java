@@ -5,6 +5,7 @@
 package ui;
 
 import java.awt.Image;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -79,6 +80,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtStartDate = new javax.swing.JTextField();
         lblPhoto = new javax.swing.JLabel();
         btnUpdate = new javax.swing.JButton();
+        btnEmployeeFilter = new javax.swing.JButton();
+        btnLevelFilter = new javax.swing.JButton();
+        txtEmployeeFilter = new javax.swing.JTextField();
+        txtLevelFilter = new javax.swing.JTextField();
         btnDelete = new javax.swing.JButton();
 
         lblTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -163,6 +168,26 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnEmployeeFilter.setText("EmpID");
+        btnEmployeeFilter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEmployeeFilterActionPerformed(evt);
+            }
+        });
+
+        btnLevelFilter.setText("LevelID");
+        btnLevelFilter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLevelFilterActionPerformed(evt);
+            }
+        });
+
+        txtEmployeeFilter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmployeeFilterActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -205,6 +230,14 @@ public class ViewJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(202, 202, 202)
                 .addComponent(btnUpdate)
+                .addGap(56, 56, 56)
+                .addComponent(btnEmployeeFilter)
+                .addGap(18, 18, 18)
+                .addComponent(txtEmployeeFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btnLevelFilter)
+                .addGap(18, 18, 18)
+                .addComponent(txtLevelFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -252,7 +285,13 @@ public class ViewJPanel extends javax.swing.JPanel {
                                         .addComponent(txtStartDate, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(lblEmail))
                                 .addGap(18, 18, 18)
-                                .addComponent(btnUpdate)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnUpdate)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btnEmployeeFilter)
+                                        .addComponent(btnLevelFilter)
+                                        .addComponent(txtEmployeeFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtLevelFilter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap(21, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -415,9 +454,27 @@ public class ViewJPanel extends javax.swing.JPanel {
        
     }//GEN-LAST:event_btnUpdateActionPerformed
 
+    private void btnEmployeeFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmployeeFilterActionPerformed
+        // TODO add your handling code here:
+        ArrayList<Employee> emps = history.filterbyid(Integer.parseInt(txtEmployeeFilter.getText()));
+        populateTable(emps);
+    }//GEN-LAST:event_btnEmployeeFilterActionPerformed
+
+    private void txtEmployeeFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmployeeFilterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmployeeFilterActionPerformed
+
+    private void btnLevelFilterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLevelFilterActionPerformed
+        // TODO add your handling code here:
+        ArrayList<Employee> emps = history.filterbylevel(Integer.parseInt(txtLevelFilter.getText()));
+        populateTable(emps);
+    }//GEN-LAST:event_btnLevelFilterActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDelete;
+    private javax.swing.JButton btnEmployeeFilter;
+    private javax.swing.JButton btnLevelFilter;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
     private javax.swing.JPanel jPanel1;
@@ -437,9 +494,11 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTable tblEmployees;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEmployeeFilter;
     private javax.swing.JTextField txtEmployeeID;
     private javax.swing.JTextField txtGender;
     private javax.swing.JTextField txtLevel;
+    private javax.swing.JTextField txtLevelFilter;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPhoneNumber;
     private javax.swing.JTextField txtPositionTitle;
@@ -451,6 +510,30 @@ private void populateTable(){
     DefaultTableModel model=(DefaultTableModel)tblEmployees.getModel();
     model.setRowCount(0);
     for(Employee em:history.getHistory())
+    {
+        Object [] row=new Object[11];
+        row[0]=em.getName();
+        row[1]=em.getEmpId();
+        row[2]=em.getAge();
+        row[3]=em.getGender();
+        row[4]=em.getStartDate();
+        row[5]=em.getLevel();
+        row[6]=em.getTeamInfo();
+        row[7]=em.getPositionTitle();
+        row[8]=em.getPhoneNumber();
+        row[9]=em.getEmail();
+        row[10]=em.getPhoto();
+        model.addRow(row);
+        
+        
+    }
+}
+
+private void populateTable(ArrayList<Employee> emps){
+    
+    DefaultTableModel model=(DefaultTableModel)tblEmployees.getModel();
+    model.setRowCount(0);
+    for(Employee em:emps)
     {
         Object [] row=new Object[11];
         row[0]=em.getName();
