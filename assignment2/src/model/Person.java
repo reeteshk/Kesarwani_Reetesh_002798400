@@ -8,19 +8,23 @@ package model;
  *
  * @author reeteshkesarwani
  */
-public class person {
-    
-    private String name;
-    private int age;
-    private long phoneNumber;
+public class Person {
+     private String name;
+    private House house;
     private String gender;
- 
-    public person(String name, int age, long phoneNumber, String gender) {
+    private String dob;
+    private int id;
+
+    public Person(String name, House residence, String gender, String dob, int id) {
+
         this.name = name;
-        this.age = age;
-        this.phoneNumber = phoneNumber;
+        this.house = residence;
         this.gender = gender;
+        this.dob = dob;
+        this.id = id;
+        
     }
+
     public String getName() {
         return name;
     }
@@ -29,21 +33,23 @@ public class person {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getId() {
+        return id;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public long getPhoneNumber() {
-        return phoneNumber;
+    public House getHouse() {
+        return house;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setHouse(House house) {
+        this.house = house;
     }
+
+  
 
     public String getGender() {
         return gender;
@@ -53,7 +59,11 @@ public class person {
         this.gender = gender;
     }
 
-   
-    
-    
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
 }

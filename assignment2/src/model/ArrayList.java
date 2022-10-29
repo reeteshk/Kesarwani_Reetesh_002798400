@@ -8,11 +8,6 @@ package model;
  *
  * @author reeteshkesarwani
  */
-public class doctor extends person {
-    
-   
-    public doctor(String name, int age, long phoneNumber, String gender) {
-        super(name, age, phoneNumber, gender);
-    }
+class ArrayList<T> {
     
 }

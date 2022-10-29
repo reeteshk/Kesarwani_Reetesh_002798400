@@ -208,6 +208,7 @@ public class viewperson extends javax.swing.JPanel {
      per[1]=Integer.parseInt(txtAge.getText());
      per[2]=Long.parseLong(txtPhoneNumber.getText());
      per[3]=txtGender.getText();
+     
      history.addNewPerson(per[0].toString(),Integer.parseInt(per[1].toString()),Long.parseLong(per[2].toString()),per[3].toString());
      JOptionPane.showMessageDialog(this, "persons updated sucessfully");
     }//GEN-LAST:event_btnupdateActionPerformed

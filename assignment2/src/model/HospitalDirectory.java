@@ -8,6 +8,6 @@ package model;
  *
  * @author reeteshkesarwani
  */
-public class house {
+public class HospitalDirectory {
     
 }

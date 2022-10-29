@@ -4,10 +4,70 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author reeteshkesarwani
  */
-public class doctorDirectory {
+public class DoctorDirectory {
+     private ArrayList<Doctor> doctors;
+
+    public DoctorDirectory() {
+        doctors = new ArrayList<>();
+    }
+
+    public void addDoctor(Doctor doctor){
+        doctors.add(doctor);
+    }
+    public void addDoctor(String name, House residence, String gender, String dob, int id, int patientId) {
+
+        Doctor doctor = new Doctor(name, residence, gender,dob,id,patientId);
+
+        doctors.add(doctor);
+    }
+
+    public ArrayList<Doctor> getDoctors() {
+        return doctors;
+    }
+
+    public void setDoctors(ArrayList<Doctor> doctors) {
+        this.doctors = doctors;
+    }
+    public Doctor getDoctor(String name){
+        
+        for (Doctor emp : doctors) {
+ 
+            if (emp.getName() == name) {
+                return emp;
+            }
+        }
+        return null;
+    }
     
+    public void deleteDoctor(String name){
+        
+        for (Doctor emp : doctors) {
+ 
+            if (emp.getName() == name) {
+                doctors.remove(emp);
+                break;
+            }
+            else if(emp.getDocId() == Integer.parseInt(name)){
+                doctors.remove(emp);
+                break;
+            }
+        }
+    }
+    
+    public DoctorDirectory idFilter(int eId) {
+
+        DoctorDirectory list = new DoctorDirectory();
+        for (Doctor emp : doctors) {
+            if (emp.getDocId() == eId) {
+                list.addDoctor(emp);
+            }
+        }
+        return list;
+    }
 }
