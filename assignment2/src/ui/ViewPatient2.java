@@ -41,23 +41,23 @@ public class ViewPatient2 extends javax.swing.JPanel {
 
         jPanel9 = new javax.swing.JPanel();
         ViewPersonn4 = new javax.swing.JButton();
-        txtCity4 = new javax.swing.JTextField();
-        txtName4 = new javax.swing.JTextField();
+        txtCity = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel40 = new javax.swing.JLabel();
-        txtGender4 = new javax.swing.JTextField();
-        txtState4 = new javax.swing.JTextField();
+        txtGender = new javax.swing.JTextField();
+        txtState = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        txtDate4 = new javax.swing.JTextField();
-        txtZip4 = new javax.swing.JTextField();
+        txtDate = new javax.swing.JTextField();
+        txtZip = new javax.swing.JTextField();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
-        txtPersonId4 = new javax.swing.JTextField();
-        txtCommunity4 = new javax.swing.JTextField();
+        txtPersonId = new javax.swing.JTextField();
+        txtCommunity = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         buttonAdd4 = new javax.swing.JButton();
-        txtAddress4 = new javax.swing.JTextField();
+        txtAddress = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -73,12 +73,18 @@ public class ViewPatient2 extends javax.swing.JPanel {
         jLabel54 = new javax.swing.JLabel();
         txtPatientId = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
-        tablePatient3 = new javax.swing.JTable();
+        tablePatient = new javax.swing.JTable();
 
         ViewPersonn4.setText("View");
         ViewPersonn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ViewPersonn4ActionPerformed(evt);
+            }
+        });
+
+        txtCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCityActionPerformed(evt);
             }
         });
 
@@ -92,9 +98,9 @@ public class ViewPatient2 extends javax.swing.JPanel {
 
         jLabel44.setText("State:");
 
-        txtPersonId4.addActionListener(new java.awt.event.ActionListener() {
+        txtPersonId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPersonId4ActionPerformed(evt);
+                txtPersonIdActionPerformed(evt);
             }
         });
 
@@ -109,9 +115,9 @@ public class ViewPatient2 extends javax.swing.JPanel {
             }
         });
 
-        txtAddress4.addActionListener(new java.awt.event.ActionListener() {
+        txtAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddress4ActionPerformed(evt);
+                txtAddressActionPerformed(evt);
             }
         });
 
@@ -145,7 +151,7 @@ public class ViewPatient2 extends javax.swing.JPanel {
 
         jLabel54.setText("Patient ID");
 
-        tablePatient3.setModel(new javax.swing.table.DefaultTableModel(
+        tablePatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null},
@@ -156,7 +162,7 @@ public class ViewPatient2 extends javax.swing.JPanel {
                 "Name", "Gender", "Date of Birth", "Person ID", "Address", "City", "State", "Zip", "Community", "Patient ID"
             }
         ));
-        jScrollPane4.setViewportView(tablePatient3);
+        jScrollPane4.setViewportView(tablePatient);
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -172,45 +178,36 @@ public class ViewPatient2 extends javax.swing.JPanel {
                         .addContainerGap()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel9Layout.createSequentialGroup()
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(41, 41, 41))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(25, 25, 25)))
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(jPanel9Layout.createSequentialGroup()
-                                            .addComponent(txtGender4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel9Layout.createSequentialGroup()
-                                            .addComponent(txtName4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(149, 149, 149)
-                                            .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel43)
+                                            .addComponent(jLabel46))
+                                        .addGap(6, 6, 6))
                                     .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(txtPersonId4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtAddress4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addGap(131, 131, 131)
-                                                .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addComponent(txtDate4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(152, 152, 152)
-                                                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addGap(19, 19, 19)
+                                        .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(23, 23, 23)))
+                                .addGap(23, 23, 23)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPersonId, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(100, 100, 100)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(12, 12, 12)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel9Layout.createSequentialGroup()
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(txtCity4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtState4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel9Layout.createSequentialGroup()
                                                 .addGap(84, 84, 84)
@@ -233,9 +230,9 @@ public class ViewPatient2 extends javax.swing.JPanel {
                                     .addGroup(jPanel9Layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtCommunity4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addComponent(txtZip4, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(169, 169, 169)
                                                 .addComponent(txtPulseRate, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
@@ -270,27 +267,27 @@ public class ViewPatient2 extends javax.swing.JPanel {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel41)
-                    .addComponent(txtName4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel42)
-                    .addComponent(txtCity4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel50)
                     .addComponent(txtTemp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
-                    .addComponent(txtGender4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel44)
-                    .addComponent(txtState4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel51)
                     .addComponent(txtBloodPressure, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel46)
-                        .addComponent(txtDate4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel45)
-                        .addComponent(txtZip4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel52)
                         .addComponent(txtPulseRate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -303,7 +300,7 @@ public class ViewPatient2 extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel47)
-                            .addComponent(txtCommunity4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(120, 120, 120)
                         .addComponent(buttonAdd4)
                         .addGap(595, 595, 595))
@@ -311,11 +308,11 @@ public class ViewPatient2 extends javax.swing.JPanel {
                         .addGap(30, 30, 30)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel48)
-                            .addComponent(txtPersonId4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPersonId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(58, 58, 58)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel40)
-                            .addComponent(txtAddress4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -325,7 +322,7 @@ public class ViewPatient2 extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 291, Short.MAX_VALUE))
+                .addGap(0, 286, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -387,19 +384,19 @@ public class ViewPatient2 extends javax.swing.JPanel {
 
     }//GEN-LAST:event_ViewPersonn4ActionPerformed
 
-    private void txtPersonId4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonId4ActionPerformed
+    private void txtPersonIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonIdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPersonId4ActionPerformed
+    }//GEN-LAST:event_txtPersonIdActionPerformed
 
     private void buttonAdd4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAdd4ActionPerformed
         // TODO add your handling code here:
-        int row_selected = tablePatient3.getSelectedRow();
+        int row_selected = tablePatient.getSelectedRow();
 
         if (row_selected < 0) {
             JOptionPane.showMessageDialog(this, "Please Select a row to update details.");
             return;
         }
-        DefaultTableModel model = (DefaultTableModel) tablePatient3.getModel();
+        DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
         Object[] selected_row = new Object[10];
         for (int i = 0; i < model.getColumnCount(); i++) {
             selected_row[i] = model.getValueAt(row_selected, i);
@@ -474,56 +471,18 @@ public class ViewPatient2 extends javax.swing.JPanel {
         populateTable();
     }//GEN-LAST:event_buttonAdd4ActionPerformed
 
-    private void txtAddress4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddress4ActionPerformed
+    private void txtAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAddress4ActionPerformed
+    }//GEN-LAST:event_txtAddressActionPerformed
+
+    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
+         // TODO add your handling code here:
+    }//GEN-LAST:event_txtCityActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ViewPersonn;
-    private javax.swing.JButton ViewPersonn1;
-    private javax.swing.JButton ViewPersonn2;
-    private javax.swing.JButton ViewPersonn3;
     private javax.swing.JButton ViewPersonn4;
-    private javax.swing.JButton buttonAdd;
-    private javax.swing.JButton buttonAdd1;
-    private javax.swing.JButton buttonAdd2;
-    private javax.swing.JButton buttonAdd3;
     private javax.swing.JButton buttonAdd4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -534,84 +493,29 @@ public class ViewPatient2 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable tablePatient;
-    private javax.swing.JTable tablePatient1;
-    private javax.swing.JTable tablePatient2;
-    private javax.swing.JTable tablePatient3;
     private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtAddress1;
-    private javax.swing.JTextField txtAddress2;
-    private javax.swing.JTextField txtAddress3;
-    private javax.swing.JTextField txtAddress4;
     private javax.swing.JTextField txtBloodPressure;
     private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtCity1;
-    private javax.swing.JTextField txtCity2;
-    private javax.swing.JTextField txtCity3;
-    private javax.swing.JTextField txtCity4;
     private javax.swing.JTextField txtCommunity;
-    private javax.swing.JTextField txtCommunity1;
-    private javax.swing.JTextField txtCommunity2;
-    private javax.swing.JTextField txtCommunity3;
-    private javax.swing.JTextField txtCommunity4;
     private javax.swing.JTextField txtDate;
-    private javax.swing.JTextField txtDate1;
-    private javax.swing.JTextField txtDate2;
-    private javax.swing.JTextField txtDate3;
-    private javax.swing.JTextField txtDate4;
     private javax.swing.JTextField txtDiagnosis;
     private javax.swing.JTextField txtGender;
-    private javax.swing.JTextField txtGender1;
-    private javax.swing.JTextField txtGender2;
-    private javax.swing.JTextField txtGender3;
-    private javax.swing.JTextField txtGender4;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtName1;
-    private javax.swing.JTextField txtName2;
-    private javax.swing.JTextField txtName3;
-    private javax.swing.JTextField txtName4;
     private javax.swing.JTextField txtPatientId;
     private javax.swing.JTextField txtPersonId;
-    private javax.swing.JTextField txtPersonId1;
-    private javax.swing.JTextField txtPersonId2;
-    private javax.swing.JTextField txtPersonId3;
-    private javax.swing.JTextField txtPersonId4;
     private javax.swing.JTextField txtPulseRate;
     private javax.swing.JTextField txtState;
-    private javax.swing.JTextField txtState1;
-    private javax.swing.JTextField txtState2;
-    private javax.swing.JTextField txtState3;
-    private javax.swing.JTextField txtState4;
     private javax.swing.JTextField txtTemp;
     private javax.swing.JTextField txtZip;
-    private javax.swing.JTextField txtZip1;
-    private javax.swing.JTextField txtZip2;
-    private javax.swing.JTextField txtZip3;
-    private javax.swing.JTextField txtZip4;
     // End of variables declaration//GEN-END:variables
 
     private void populateTable() {

@@ -6,6 +6,8 @@ package ui;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import model.DoctorDirectory;
+import model.EncounterHistory;
 import model.HospitalDirectory;
 import model.PatientDirectory;
 import model.PersonDirectory;
@@ -15,21 +17,30 @@ import model.System;
  *
  * @author reeteshkesarwani
  */
-public class SystemFrame extends javax.swing.JFrame {
+ public class SystemFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form SystemFrame
      */
     
     
-    PersonDirectory personDirectory;
+  PersonDirectory personDirectory;
     PatientDirectory patientDirectory;
+    DoctorDirectory doctorDirectory;
     HospitalDirectory hospitalDirectory;
-    public SystemFrame() {
+    public SystemFrame(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    HospitalDirectory hospitalDirectory) {
         initComponents();
-        personDirectory = new PersonDirectory();
-        patientDirectory = new PatientDirectory();
-        
+        this.personDirectory =  personDirectory;
+        this.patientDirectory =  patientDirectory;
+        this.hospitalDirectory= hospitalDirectory;
+        this.doctorDirectory=doctorDirectory;
+    }
+
+    private SystemFrame() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     /**
@@ -44,8 +55,6 @@ public class SystemFrame extends javax.swing.JFrame {
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         buttonView = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -64,10 +73,6 @@ public class SystemFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        jButton3.setText("Hospital");
-
-        jButton4.setText("Encounter");
 
         jButton5.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(0, 0, 153));
@@ -127,24 +132,17 @@ public class SystemFrame extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(buttonView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(buttonReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jButton5)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(buttonReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -162,13 +160,9 @@ public class SystemFrame extends javax.swing.JFrame {
                 .addComponent(jButton9)
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
-                .addGap(47, 47, 47)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4)
-                .addGap(36, 36, 36)
+                .addGap(18, 18, 18)
                 .addComponent(buttonReturn)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(521, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -228,14 +222,14 @@ public class SystemFrame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        ViewPatient viewPanel1 = new ViewPatient(patientDirectory);
+        ViewPatient viewPanel1 = new ViewPatient(personDirectory,patientDirectory);
         jSplitPane1.setRightComponent(viewPanel1);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void buttonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturnActionPerformed
         // TODO add your handling code here:
-        LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+
+        this.setVisible(false);
         
     }//GEN-LAST:event_buttonReturnActionPerformed
 
@@ -293,8 +287,6 @@ public class SystemFrame extends javax.swing.JFrame {
     private javax.swing.JButton buttonReturn;
     private javax.swing.JButton buttonView;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

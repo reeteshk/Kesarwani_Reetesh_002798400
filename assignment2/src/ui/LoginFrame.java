@@ -5,6 +5,8 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.DoctorDirectory;
+import model.HospitalDirectory;
 import model.PatientDirectory;
 import model.PersonDirectory;
 
@@ -19,9 +21,15 @@ public class LoginFrame extends javax.swing.JFrame {
      */
     PersonDirectory personDirectory;
     PatientDirectory patientDirectory;
+    DoctorDirectory doctorDirectory;
+    HospitalDirectory hospitalDirectory;
     public LoginFrame() {
         initComponents();
-        personDirectory = new PersonDirectory();
+        this.personDirectory = new PersonDirectory();
+        this.patientDirectory=new PatientDirectory();
+        this.doctorDirectory=new DoctorDirectory();
+        this.hospitalDirectory=new HospitalDirectory();
+        
     }
 
     /**
@@ -183,31 +191,31 @@ public class LoginFrame extends javax.swing.JFrame {
         String password=txtPassword.getText();
         if( txtUserName.getText().matches("admin") && txtPassword.getText().matches("admin")){
             if(buttonSystem.isSelected()){
-                SystemFrame systemPanel = new SystemFrame();
+                SystemFrame systemPanel = new SystemFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
                 systemPanel.setVisible(true);
             } 
         }
         else if( txtUserName.getText().matches("patient") && txtPassword.getText().matches("patient")){
             if(buttonPatient.isSelected()){
-               PatientFrame patientframe = new PatientFrame();
+               PatientFrame patientframe = new PatientFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
                 patientframe.setVisible(true);
             }   
         }
         else if( txtUserName.getText().matches("doctor") && txtPassword.getText().matches("doctor")){
             if(buttonDoctor.isSelected()){
-                DoctorFrame doctorframe = new DoctorFrame();
+                DoctorFrame doctorframe = new DoctorFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
                 doctorframe.setVisible(true);
             }   
         }
         else if( txtUserName.getText().matches("hospital") && txtPassword.getText().matches("hospital")){
             if(buttonHospital.isSelected()){
-                HospitalFrame hospitalframe = new HospitalFrame();
+                HospitalFrame hospitalframe = new HospitalFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
                 hospitalframe.setVisible(true);
             }   
         }
          else if( txtUserName.getText().matches("community") && txtPassword.getText().matches("community")){
             if(buttonCommunity.isSelected()){
-                SystemFrame systemPanel = new SystemFrame();
+                SystemFrame systemPanel = new SystemFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
                 systemPanel.setVisible(true);
             }   
         }

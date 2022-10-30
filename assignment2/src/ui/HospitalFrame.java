@@ -4,7 +4,10 @@
  */
 package ui;
 
+import model.DoctorDirectory;
 import model.HospitalDirectory;
+import model.PatientDirectory;
+import model.PersonDirectory;
 
 /**
  *
@@ -15,10 +18,19 @@ public class HospitalFrame extends javax.swing.JFrame {
     /**
      * Creates new form HospitalFrame
      */
+     PersonDirectory personDirectory;
+    PatientDirectory patientDirectory;
+    DoctorDirectory doctorDirectory;
     HospitalDirectory hospitalDirectory;
-    public HospitalFrame( ) {
+    public HospitalFrame(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    HospitalDirectory hospitalDirectory ) {
         initComponents();
-        this.hospitalDirectory=new HospitalDirectory();
+           this.personDirectory =  personDirectory;
+        this.patientDirectory =  patientDirectory;
+        this.hospitalDirectory= hospitalDirectory;
+        this.doctorDirectory=doctorDirectory;
     }
 
     /**
@@ -139,8 +151,8 @@ public class HospitalFrame extends javax.swing.JFrame {
 
     private void buttonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturnActionPerformed
         // TODO add your handling code here:
-        LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+       
+        this.setVisible(true);
     }//GEN-LAST:event_buttonReturnActionPerformed
 
     /**

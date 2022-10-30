@@ -4,6 +4,8 @@
  */
 package ui;
 
+import model.DoctorDirectory;
+import model.HospitalDirectory;
 import model.PatientDirectory;
 import model.PersonDirectory;
 
@@ -16,12 +18,20 @@ public class PatientFrame extends javax.swing.JFrame {
     /**
      * Creates new form PatientFrame
      */
-    PersonDirectory personDirectory;
+ PersonDirectory personDirectory;
     PatientDirectory patientDirectory;
-    public PatientFrame() {
+    DoctorDirectory doctorDirectory;
+    HospitalDirectory hospitalDirectory;
+    
+    public PatientFrame(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    HospitalDirectory hospitalDirectory) {
         initComponents();
-            personDirectory = new PersonDirectory();
-        patientDirectory = new PatientDirectory();
+           this.personDirectory =  personDirectory;
+        this.patientDirectory =  patientDirectory;
+        this.hospitalDirectory= hospitalDirectory;
+        this.doctorDirectory=doctorDirectory;
     }
 
     /**
@@ -37,6 +47,7 @@ public class PatientFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
         buttonReturn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,24 +70,37 @@ public class PatientFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 153));
+        jButton1.setText("Search Doctors");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(buttonReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonReturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(183, 183, 183)
+                .addGap(148, 148, 148)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton6)
                 .addGap(18, 18, 18)
                 .addComponent(buttonReturn)
-                .addContainerGap(603, Short.MAX_VALUE))
+                .addContainerGap(602, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -118,16 +142,22 @@ public class PatientFrame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        ViewPatient viewPanel1 = new ViewPatient(patientDirectory);
+        ViewPatient viewPanel1 = new ViewPatient(personDirectory,patientDirectory);
         jSplitPane1.setRightComponent(viewPanel1);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void buttonReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReturnActionPerformed
         // TODO add your handling code here:
-        LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+       
+        this.setVisible(false);
 
     }//GEN-LAST:event_buttonReturnActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        patientdocView patdoc1=new patientdocView();
+        jSplitPane1.setRightComponent(patdoc1);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,13 +189,14 @@ public class PatientFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PatientFrame().setVisible(true);
+             //   new PatientFrame().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton buttonReturn;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
