@@ -11,52 +11,28 @@ import java.util.ArrayList;
  */
 public class Community {
     
-    private ArrayList<House> houses;
+   private String community;
+    private ArrayList<House> house;
     
-    public Community(){
-        houses = new ArrayList<>();
+    public Community(String community){
+        this.community = community;
     }
-    public void addHouse(House h ){
-        houses.add(h);
+
+    public String getCommunity() {
+        return community;
+    }
+
+    public void setCommunity(String community) {
+        this.community = community;
     }
 
     public ArrayList<House> getHouse() {
-        return houses;
-    }
-    public House getHouses(String name){
-        
-        for (House house : houses) {
- 
-            if (house.getCommunity() == name) {
-                return house;
-            }
-        }
-        return null;
+        return house;
     }
 
-    public void setHouse(ArrayList<House> houses) {
-        this.houses = houses;
+    public void setHouse(ArrayList<House> house) {
+        this.house = house;
     }
     
-    public Community commFilter(String name) {
-
-        Community list = new Community();
-        for (House house : houses) {
-            if (house.getCommunity().equals(name)) {
-                list.addHouse(house);
-            }
-        }
-        return list;
-    }
-    public void deleteHouse(String name){
-        
-        for (House emp : houses) {
- 
-            if (emp.getCommunity() == name) {
-                houses.remove(emp);
-                break;
-            }
-        }
-    }
     
 }

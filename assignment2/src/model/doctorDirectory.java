@@ -49,11 +49,11 @@ public class DoctorDirectory {
         
         for (Doctor emp : doctors) {
  
-            if (emp.getName() == name) {
+            if (emp.getName()== (name)) {
                 doctors.remove(emp);
                 break;
             }
-            else if(emp.getDocId() == Integer.parseInt(name)){
+            else if(emp.getName()== (name)){
                 doctors.remove(emp);
                 break;
             }
