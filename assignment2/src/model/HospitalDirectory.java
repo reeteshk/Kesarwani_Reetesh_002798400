@@ -31,7 +31,7 @@ public class HospitalDirectory {
         
         for (Hospital emp : hospitals) {
  
-            if (emp.getCommunity() == name) {
+            if (emp.getHospitalName() == name) {
                 return emp;
             }
         }
@@ -52,7 +52,7 @@ public class HospitalDirectory {
         
         for (Hospital emp : hospitals) {
  
-            if (emp.getCommunity() == name) {
+            if (emp.getHospitalName()== name) {
                 hospitals.remove(emp);
                 break;
             }

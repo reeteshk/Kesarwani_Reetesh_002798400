@@ -6,6 +6,7 @@ package ui;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import model.HospitalDirectory;
 import model.PatientDirectory;
 import model.PersonDirectory;
 import model.System;
@@ -23,6 +24,7 @@ public class SystemFrame extends javax.swing.JFrame {
     
     PersonDirectory personDirectory;
     PatientDirectory patientDirectory;
+    HospitalDirectory hospitalDirectory;
     public SystemFrame() {
         initComponents();
         personDirectory = new PersonDirectory();
@@ -239,8 +241,8 @@ public class SystemFrame extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-         LoginFrame loginFrame = new LoginFrame();
-        loginFrame.setVisible(true);
+        viewHospital viewHospital = new viewHospital(hospitalDirectory);
+        jSplitPane1.setRightComponent(viewHospital);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed

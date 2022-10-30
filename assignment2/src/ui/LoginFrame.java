@@ -201,12 +201,12 @@ public class LoginFrame extends javax.swing.JFrame {
         }
         else if( txtUserName.getText().matches("hospital") && txtPassword.getText().matches("hospital")){
             if(buttonHospital.isSelected()){
-                SystemFrame systemPanel = new SystemFrame();
-                systemPanel.setVisible(true);
+                HospitalFrame hospitalframe = new HospitalFrame();
+                hospitalframe.setVisible(true);
             }   
         }
          else if( txtUserName.getText().matches("community") && txtPassword.getText().matches("community")){
-            if(buttonHospital.isSelected()){
+            if(buttonCommunity.isSelected()){
                 SystemFrame systemPanel = new SystemFrame();
                 systemPanel.setVisible(true);
             }   
