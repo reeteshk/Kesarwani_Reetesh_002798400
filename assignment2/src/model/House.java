@@ -13,9 +13,9 @@ public class House {
     private City city;
     private String state;
     private int pin;
-    private Community community;
+    private String community;
     
-    public House(String address, City city, String state, int pin,Community community){
+    public House(String address, City city, String state, int pin,String community){
         
         
         this.address = address;
@@ -25,13 +25,15 @@ public class House {
         this.community = community;
     }
 
-    public Community getCommunity() {
+    public String getCommunity() {
         return community;
     }
 
-    public void setCommunity(Community community) {
+    public void setCommunity(String community) {
         this.community = community;
     }
+
+   
 
   
 

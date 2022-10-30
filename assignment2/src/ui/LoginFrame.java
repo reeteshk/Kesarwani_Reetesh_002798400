@@ -5,6 +5,7 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import model.Community;
 import model.DoctorDirectory;
 import model.HospitalDirectory;
 import model.PatientDirectory;
@@ -23,12 +24,14 @@ public class LoginFrame extends javax.swing.JFrame {
     PatientDirectory patientDirectory;
     DoctorDirectory doctorDirectory;
     HospitalDirectory hospitalDirectory;
+    Community community;
     public LoginFrame() {
         initComponents();
         this.personDirectory = new PersonDirectory();
         this.patientDirectory=new PatientDirectory();
         this.doctorDirectory=new DoctorDirectory();
         this.hospitalDirectory=new HospitalDirectory();
+        this.community=new Community();
         
     }
 
@@ -191,7 +194,7 @@ public class LoginFrame extends javax.swing.JFrame {
         String password=txtPassword.getText();
         if( txtUserName.getText().matches("admin") && txtPassword.getText().matches("admin")){
             if(buttonSystem.isSelected()){
-                SystemFrame systemPanel = new SystemFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
+                SystemFrame systemPanel = new SystemFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory,community);
                 systemPanel.setVisible(true);
             } 
         }
@@ -215,8 +218,8 @@ public class LoginFrame extends javax.swing.JFrame {
         }
          else if( txtUserName.getText().matches("community") && txtPassword.getText().matches("community")){
             if(buttonCommunity.isSelected()){
-                SystemFrame systemPanel = new SystemFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory);
-                systemPanel.setVisible(true);
+               CommunityFrame communityframe=new CommunityFrame(personDirectory,patientDirectory,doctorDirectory,hospitalDirectory,community);
+               communityframe.setVisible(true);
             }   
         }
         else{

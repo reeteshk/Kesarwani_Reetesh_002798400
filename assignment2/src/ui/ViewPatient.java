@@ -331,7 +331,7 @@ public class ViewPatient extends javax.swing.JPanel {
         
         Date resultdate = new Date(System.currentTimeMillis());
         City city = new City(selected_row[5].toString());
-        Community community = new Community(selected_row[8].toString());
+        String community = selected_row[8].toString();
         VitalSigns vs = new VitalSigns(0,0,0);
         Encounter encounter = new Encounter(vs,resultdate,txtDiagnosis.getText());
         
@@ -358,7 +358,7 @@ public class ViewPatient extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
         Patient patient = patientDirectory.getPatient(model.getValueAt(row_selected, 0).toString());
         House house = patient.getHouse();
-        String comm = house.getCommunity().getCommunity();
+        String comm = house.getCommunity();
         City city = house.getCity();
 
         txtName.setText(patient.getName());
@@ -428,7 +428,7 @@ public class ViewPatient extends javax.swing.JPanel {
             data[5] = person.getHouse().getCity().getCityName();
             data[6] = person.getHouse().getState();
             data[7] = person.getHouse().getPin();
-            data[8] = person.getHouse().getCommunity().getCommunity();
+            data[8] = person.getHouse().getCommunity();
             data[9] = person.getPatientId();
             
             model.addRow(data);

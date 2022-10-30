@@ -305,7 +305,7 @@ public class ViewPerson extends javax.swing.JPanel {
         selected_row[8] = txtCommunity.getText();
         
         City city = new City(selected_row[5].toString());
-        Community community = new Community(selected_row[8].toString());
+        String community = selected_row[8].toString();
         
         House house = new House(selected_row[4].toString(),city,selected_row[6].toString(),Integer.parseInt(selected_row[7].toString()),community);
             
@@ -330,7 +330,7 @@ public class ViewPerson extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tablePerson.getModel();
         Person person = personDirectory.getPerson(model.getValueAt(row_selected, 0).toString());
         House house = person.getHouse();
-        Community comm = house.getCommunity();
+        String comm = house.getCommunity();
         City city = house.getCity();
         
         txtName.setText(person.getName());
@@ -341,7 +341,7 @@ public class ViewPerson extends javax.swing.JPanel {
         txtCity.setText(city.getCityName());
         txtState.setText(house.getState());
         txtZip.setText(String.valueOf(house.getPin()));
-        txtCommunity.setText(comm.getCommunity());
+        txtCommunity.setText(comm);
     }//GEN-LAST:event_ViewPersonnActionPerformed
 
     private void txtPersonIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPersonIdActionPerformed
@@ -397,7 +397,7 @@ private void populateTable() {
             data[5] = person.getHouse().getCity().getCityName();
             data[6] = person.getHouse().getState();
             data[7] = person.getHouse().getPin();
-            data[8] = person.getHouse().getCommunity().getCommunity();
+            data[8] = person.getHouse().getCommunity();
             
             model.addRow(data);
             

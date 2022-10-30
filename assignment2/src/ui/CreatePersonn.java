@@ -311,7 +311,7 @@ public boolean validateData() {
 
         if (validateData()) {
 
-            House house = new House(txtAddress.getText(), new City(txtCity.getText()), txtState.getText(), Integer.parseInt(txtZip.getText()), new Community(txtCommunity.getText()));
+            House house = new House(txtAddress.getText(), new City(txtCity.getText()), txtState.getText(), Integer.parseInt(txtZip.getText()), txtCommunity.getText());
 
             Person person = new Person(txtName.getText(), house, txtGender.getText(), txtDate.getText(), Integer.parseInt(txtPersonId.getText()));
             personDirectory.addPerson(person);

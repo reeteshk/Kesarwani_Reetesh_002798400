@@ -5,9 +5,13 @@
 package ui;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Doctor;
 import model.DoctorDirectory;
+import model.HospitalDirectory;
+import model.PatientDirectory;
+import model.PersonDirectory;
 
 /**
  *
@@ -19,9 +23,18 @@ public class patientdocView extends javax.swing.JPanel {
      * Creates new form patientdocView
      */
     DoctorDirectory doctorDirectory;
-    public patientdocView() {
+    PersonDirectory personDirectory;
+    PatientDirectory patientDirectory;
+    HospitalDirectory hospitalDirectory;
+    public patientdocView(PersonDirectory personDirectory,
+    PatientDirectory patientDirectory,
+    DoctorDirectory doctorDirectory,
+    HospitalDirectory hospitalDirectory) {
         initComponents();
-        this.doctorDirectory=new  DoctorDirectory();
+        this.doctorDirectory=  doctorDirectory;
+        this.hospitalDirectory=hospitalDirectory;
+        this.personDirectory=personDirectory;
+        this.patientDirectory=patientDirectory;
     }
 
     /**
@@ -97,8 +110,12 @@ public class patientdocView extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        DoctorDirectory emps = doctorDirectory.idFilter(Integer.parseInt(txtDoctorFilter.getText().toString()));
-        populateTable();
+        if (txtDoctorFilter.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please Enter Community to filter");
+            return;
+        }
+        DoctorDirectory doctorDirectory1 = doctorDirectory.idFilter(txtDoctorFilter.getText().toString());
+        populateTable(doctorDirectory1);
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
@@ -125,10 +142,33 @@ public class patientdocView extends javax.swing.JPanel {
             data[5] = person.getHouse().getCity().getCityName();
             data[6] = person.getHouse().getState();
             data[7] = person.getHouse().getPin();
-            data[8] = person.getHouse().getCommunity().getCommunity();
+            data[8] = person.getHouse().getCommunity();
             data[9] = person.getDocId();
             
             model.addRow(data);
         }
+    }
+
+    private void populateTable(DoctorDirectory doctorDirectory1) {
+        DefaultTableModel model = (DefaultTableModel) tableDoctor.getModel();
+        model.setRowCount(0);
+        
+        for(Doctor person : doctorDirectory1.getDoctors()){
+            
+            Object[] data = new Object[10];
+            data[0] = person.getName();
+            data[1] = person.getGender();
+            data[2] = person.getDob();
+            data[3] = person.getId();
+            data[4] = person.getHouse().getAddress();
+            data[5] = person.getHouse().getCity().getCityName();
+            data[6] = person.getHouse().getState();
+            data[7] = person.getHouse().getPin();
+            data[8] = person.getHouse().getCommunity();
+            data[9] = person.getDocId();
+            
+            model.addRow(data);
+        }
+        
     }
 }

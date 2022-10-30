@@ -14,8 +14,8 @@ public class Community {
    private String community;
     private ArrayList<House> house;
     
-    public Community(String community){
-        this.community = community;
+    public Community(){
+        house = new ArrayList<>();
     }
 
     public String getCommunity() {
@@ -28,6 +28,9 @@ public class Community {
 
     public ArrayList<House> getHouse() {
         return house;
+    }
+    public void addHouse(House h ){
+        house.add(h);
     }
 
     public void setHouse(ArrayList<House> house) {

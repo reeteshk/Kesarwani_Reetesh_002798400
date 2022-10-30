@@ -19,9 +19,9 @@ public class PatientDirectory {
     }
     public void addPatient() {
         Date resultdate = new Date();
-        Patient p1 = new Patient("Raushan",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("parker Street")),"Male","11/29/1997",1,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),11);
-        Patient p2 = new Patient("Gaurav",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Roxbury")),"Male","11/29/1997",2,new Encounter(new VitalSigns(11,21,31),resultdate,"Diabetes"),12);
-        Patient p3 = new Patient("Rohit",new House("75Aplhonsus",new City("Boston"),"MA",021200,new Community("Boylston")),"Male","11/29/1997",3,new Encounter(new VitalSigns(12,22,32),resultdate,"Obesity"),13);
+       Patient p1 = new Patient("Raushannn",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Parker Street"),"Male","11/29/1997",1,new Encounter(new VitalSigns(10,20,30),resultdate,"Septicemia"),21);
+        Patient p2 = new Patient("Gauravnn",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Roxbury"),"Male","11/29/1997",2,new Encounter(new VitalSigns(11,21,31),resultdate,"Diabetes"),22);
+        Patient p3 = new Patient("Rohitnn",new House("75Aplhonsus",new City("Boston"),"MA",021200,"Northeastern"),"Male","11/29/1997",3,new Encounter(new VitalSigns(12,22,32),resultdate,"Obesity"),13);
         addPatients(p1);
         addPatients(p2);
         addPatients(p3);

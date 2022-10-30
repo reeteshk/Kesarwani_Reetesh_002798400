@@ -6,6 +6,7 @@ package ui;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import model.Community;
 import model.DoctorDirectory;
 import model.EncounterHistory;
 import model.HospitalDirectory;
@@ -28,15 +29,17 @@ import model.System;
     PatientDirectory patientDirectory;
     DoctorDirectory doctorDirectory;
     HospitalDirectory hospitalDirectory;
+    Community community;
     public SystemFrame(PersonDirectory personDirectory,
     PatientDirectory patientDirectory,
     DoctorDirectory doctorDirectory,
-    HospitalDirectory hospitalDirectory) {
+    HospitalDirectory hospitalDirectory,Community community) {
         initComponents();
         this.personDirectory =  personDirectory;
         this.patientDirectory =  patientDirectory;
         this.hospitalDirectory= hospitalDirectory;
         this.doctorDirectory=doctorDirectory;
+        this.community=community;
     }
 
     private SystemFrame() {
@@ -61,6 +64,7 @@ import model.System;
         buttonReturn = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -128,6 +132,13 @@ import model.System;
             }
         });
 
+        jButton2.setText("Community");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -142,7 +153,10 @@ import model.System;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(buttonReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -160,9 +174,11 @@ import model.System;
                 .addComponent(jButton9)
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2)
+                .addGap(7, 7, 7)
                 .addComponent(buttonReturn)
-                .addContainerGap(521, Short.MAX_VALUE))
+                .addContainerGap(497, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -241,9 +257,15 @@ import model.System;
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-       viewDoctor viewdoctor = new viewDoctor(personDirectory);
+       viewDoctor viewdoctor = new viewDoctor(personDirectory,doctorDirectory);
         jSplitPane1.setRightComponent(viewdoctor);
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        viewCommunity viewcommunity = new viewCommunity(personDirectory,patientDirectory,hospitalDirectory,doctorDirectory,community);
+       jSplitPane1.setRightComponent(viewcommunity);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -287,6 +309,7 @@ import model.System;
     private javax.swing.JButton buttonReturn;
     private javax.swing.JButton buttonView;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

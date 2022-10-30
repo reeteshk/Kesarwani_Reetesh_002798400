@@ -60,11 +60,11 @@ public class DoctorDirectory {
         }
     }
     
-    public DoctorDirectory idFilter(int eId) {
+    public DoctorDirectory idFilter(String comm) {
 
         DoctorDirectory list = new DoctorDirectory();
         for (Doctor emp : doctors) {
-            if (emp.getDocId() == eId) {
+            if (emp.getHouse().getCommunity().equals(comm)) {
                 list.addDoctor(emp);
             }
         }

@@ -142,7 +142,10 @@ public class PatientFrame extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        ViewPatient viewPanel1 = new ViewPatient(personDirectory,patientDirectory);
+        doctorpatientView viewPanel1 = new doctorpatientView( personDirectory,
+     patientDirectory,
+     doctorDirectory,
+     hospitalDirectory);
         jSplitPane1.setRightComponent(viewPanel1);
     }//GEN-LAST:event_jButton6ActionPerformed
 
@@ -155,7 +158,10 @@ public class PatientFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        patientdocView patdoc1=new patientdocView();
+        patientdocView patdoc1=new patientdocView(personDirectory,
+     patientDirectory,
+     doctorDirectory,
+     hospitalDirectory);
         jSplitPane1.setRightComponent(patdoc1);
     }//GEN-LAST:event_jButton1ActionPerformed
 

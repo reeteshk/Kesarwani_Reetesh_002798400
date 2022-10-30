@@ -30,9 +30,9 @@ public class viewDoctor extends javax.swing.JPanel {
      */
       DoctorDirectory doctorDirectory;
     PersonDirectory personDirectory;
-    public viewDoctor(PersonDirectory personDirectory) {
+    public viewDoctor(PersonDirectory personDirectory,DoctorDirectory doctorDirectory) {
         initComponents();
-        this.doctorDirectory = new  DoctorDirectory();
+        this.doctorDirectory =  doctorDirectory;
         this.personDirectory = personDirectory;
         populateTable();
         populateTable2();
@@ -356,7 +356,7 @@ public class viewDoctor extends javax.swing.JPanel {
         selected_row[9] = Integer.valueOf(txtDoctorId.getText());
 
         City city = new City(selected_row[5].toString());
-        Community community = new Community(selected_row[8].toString());
+        String community = selected_row[8].toString();
 
         
         House house = new House(selected_row[4].toString(),city,selected_row[6].toString(),Integer.parseInt(selected_row[7].toString()), community);
@@ -426,7 +426,7 @@ public class viewDoctor extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) tableDoctor.getModel();
         Doctor doctor = doctorDirectory.getDoctor(model.getValueAt(row_selected, 0).toString());
         House house = doctor.getHouse();
-        String comm = house.getCommunity().getCommunity();
+        String comm = house.getCommunity();
         City city = house.getCity();
 
         txtName.setText(doctor.getName());
@@ -490,7 +490,7 @@ public class viewDoctor extends javax.swing.JPanel {
             data[5] = person.getHouse().getCity().getCityName();
             data[6] = person.getHouse().getState();
             data[7] = person.getHouse().getPin();
-            data[8] = person.getHouse().getCommunity().getCommunity();
+            data[8] = person.getHouse().getCommunity();
             
             model.addRow(data);
         }
@@ -512,7 +512,7 @@ public class viewDoctor extends javax.swing.JPanel {
             data[5] = person.getHouse().getCity().getCityName();
             data[6] = person.getHouse().getState();
             data[7] = person.getHouse().getPin();
-            data[8] = person.getHouse().getCommunity().getCommunity();
+            data[8] = person.getHouse().getCommunity();
             data[9] = person.getDocId();
             
             model.addRow(data);
