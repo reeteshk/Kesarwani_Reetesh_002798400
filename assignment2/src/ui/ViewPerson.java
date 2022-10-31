@@ -66,6 +66,9 @@ public class ViewPerson extends javax.swing.JPanel {
 
         setForeground(new java.awt.Color(51, 51, 0));
 
+        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 0));
         jLabel1.setText("View Person");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -74,8 +77,8 @@ public class ViewPerson extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(253, 253, 253)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,7 +311,7 @@ public class ViewPerson extends javax.swing.JPanel {
                 selected_row[1].toString(),
                 selected_row[2].toString(),
                 Integer.parseInt(selected_row[3].toString()));
-        JOptionPane.showMessageDialog(this, "Employee Updated for selected record successfully");
+        JOptionPane.showMessageDialog(this, "Person Updated for selected record successfully");
         populateTable();
     }//GEN-LAST:event_buttonSaveActionPerformed
 

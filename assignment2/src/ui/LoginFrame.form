@@ -45,16 +45,17 @@
                           <Component id="txtPassword" min="-2" pref="211" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="buttonSystem" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="buttonDoctor" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="buttonHospital" pref="127" max="32767" attributes="0"/>
-                          <Component id="buttonPatient" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                          <Component id="buttonCommunity" alignment="0" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="2" attributes="0">
+                          <Component id="buttonSystem" alignment="2" max="32767" attributes="0"/>
+                          <Component id="buttonPatient" alignment="2" max="32767" attributes="0"/>
+                          <Component id="buttonDoctor" alignment="2" max="32767" attributes="0"/>
+                          <Component id="buttonHospital" alignment="2" max="32767" attributes="0"/>
+                          <Component id="buttonCommunity" alignment="2" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -71,16 +72,13 @@
                       <Component id="buttonCommunity" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="201" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtUserName" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jLabel1" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                              </Group>
+                          <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                              <Component id="txtUserName" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="jLabel1" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="buttonSystem" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="buttonPatient" min="-2" max="-2" attributes="0"/>

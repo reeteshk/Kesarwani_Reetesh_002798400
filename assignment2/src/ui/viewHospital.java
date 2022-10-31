@@ -246,7 +246,7 @@ public class viewHospital extends javax.swing.JPanel {
         Hospital h=new Hospital(selected_row[0].toString(),selected_row[1].toString());
         hospitalDirectory.addHospital(h);
         
-        JOptionPane.showMessageDialog(this, "Doctor Updated for selected record successfully");
+        JOptionPane.showMessageDialog(this, "Hospital Updated for selected record successfully");
         populateTable();
         
     }//GEN-LAST:event_jButton3ActionPerformed
