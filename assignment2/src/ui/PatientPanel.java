@@ -42,8 +42,9 @@ public class PatientPanel extends javax.swing.JPanel {
         buttonReturn = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
 
-        jButton5.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 153));
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(51, 51, 0));
         jButton5.setText("Person Registration");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,8 +52,9 @@ public class PatientPanel extends javax.swing.JPanel {
             }
         });
 
-        buttonView.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonView.setForeground(new java.awt.Color(0, 0, 153));
+        buttonView.setBackground(new java.awt.Color(204, 204, 204));
+        buttonView.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonView.setForeground(new java.awt.Color(51, 51, 0));
         buttonView.setText("Existing Person");
         buttonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,8 +62,9 @@ public class PatientPanel extends javax.swing.JPanel {
             }
         });
 
-        buttonReturn.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonReturn.setForeground(new java.awt.Color(0, 0, 153));
+        buttonReturn.setBackground(new java.awt.Color(204, 204, 204));
+        buttonReturn.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonReturn.setForeground(new java.awt.Color(51, 51, 0));
         buttonReturn.setText("Log out");
         buttonReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,7 +94,7 @@ public class PatientPanel extends javax.swing.JPanel {
                 .addComponent(buttonView)
                 .addGap(32, 32, 32)
                 .addComponent(buttonReturn)
-                .addContainerGap(671, Short.MAX_VALUE))
+                .addContainerGap(668, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);

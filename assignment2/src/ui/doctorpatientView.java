@@ -83,10 +83,14 @@ public class doctorpatientView extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         tablePatient = new javax.swing.JTable();
 
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         jLabel1.setText("Find Patient");
 
         jLabel2.setText("patient ID");
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 0));
         jButton1.setText("Search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,6 +128,8 @@ public class doctorpatientView extends javax.swing.JPanel {
 
         jLabel14.setText("Pulse Rate");
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -235,7 +241,7 @@ public class doctorpatientView extends javax.swing.JPanel {
                 .addGap(37, 37, 37)
                 .addComponent(jLabel1)
                 .addGap(48, 48, 48)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)

@@ -90,6 +90,7 @@ public class viewCommunity extends javax.swing.JPanel {
         txtCommunity = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         jLabel1.setText("View Community");
 
         tableCommunity.setModel(new javax.swing.table.DefaultTableModel(
@@ -117,6 +118,8 @@ public class viewCommunity extends javax.swing.JPanel {
 
         jLabel7.setText("community");
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
         jButton1.setText("Add");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +209,7 @@ public class viewCommunity extends javax.swing.JPanel {
                     .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

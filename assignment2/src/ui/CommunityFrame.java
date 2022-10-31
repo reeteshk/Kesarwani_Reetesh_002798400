@@ -53,8 +53,9 @@ public class CommunityFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        buttonReturn.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonReturn.setForeground(new java.awt.Color(0, 0, 153));
+        buttonReturn.setBackground(new java.awt.Color(204, 204, 204));
+        buttonReturn.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonReturn.setForeground(new java.awt.Color(51, 51, 0));
         buttonReturn.setText("Log out");
         buttonReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,8 +63,9 @@ public class CommunityFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(0, 0, 153));
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
+        jButton9.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(51, 51, 0));
         jButton9.setText("View Community");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +91,7 @@ public class CommunityFrame extends javax.swing.JFrame {
                 .addComponent(jButton9)
                 .addGap(33, 33, 33)
                 .addComponent(buttonReturn)
-                .addContainerGap(280, Short.MAX_VALUE))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel3);
@@ -103,7 +105,7 @@ public class CommunityFrame extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jSplitPane1)
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

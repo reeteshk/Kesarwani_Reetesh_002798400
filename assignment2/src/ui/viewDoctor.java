@@ -101,10 +101,15 @@ public class viewDoctor extends javax.swing.JPanel {
             tablePerson.getColumnModel().getColumn(6).setHeaderValue("State");
         }
 
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 0));
         jLabel1.setText("Existing Persons");
 
         jLabel2.setText("Doctor ID");
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 0));
         jButton1.setText("AddDoctor");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +134,8 @@ public class viewDoctor extends javax.swing.JPanel {
 
         jLabel4.setText("Date of Birth:");
 
+        buttonSave.setBackground(new java.awt.Color(204, 204, 204));
+        buttonSave.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         buttonSave.setText("Update");
         buttonSave.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +177,8 @@ public class viewDoctor extends javax.swing.JPanel {
 
         jLabel12.setText("Doctor ID:");
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         jButton2.setText("View");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

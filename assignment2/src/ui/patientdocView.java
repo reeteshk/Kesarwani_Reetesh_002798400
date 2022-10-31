@@ -52,6 +52,8 @@ public class patientdocView extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         tableDoctor = new javax.swing.JTable();
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         jButton1.setText("search");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,7 +106,7 @@ public class patientdocView extends javax.swing.JPanel {
                     .addComponent(jButton1))
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(326, Short.MAX_VALUE))
+                .addContainerGap(320, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

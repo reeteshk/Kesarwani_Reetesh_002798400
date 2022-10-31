@@ -55,8 +55,9 @@ public class DoctorFrame extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(150);
 
-        jButton6.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 153));
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(51, 51, 0));
         jButton6.setText("View Doctor");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +65,9 @@ public class DoctorFrame extends javax.swing.JFrame {
             }
         });
 
-        buttonReturn.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonReturn.setForeground(new java.awt.Color(0, 0, 153));
+        buttonReturn.setBackground(new java.awt.Color(204, 204, 204));
+        buttonReturn.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonReturn.setForeground(new java.awt.Color(51, 51, 0));
         buttonReturn.setText("Log out");
         buttonReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +75,9 @@ public class DoctorFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 153));
+        jButton7.setBackground(new java.awt.Color(204, 204, 204));
+        jButton7.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(51, 51, 0));
         jButton7.setText("Add Value");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +85,9 @@ public class DoctorFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton8.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(0, 0, 153));
+        jButton8.setBackground(new java.awt.Color(204, 204, 204));
+        jButton8.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton8.setForeground(new java.awt.Color(51, 51, 0));
         jButton8.setText("Add Patient");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +133,7 @@ public class DoctorFrame extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(49, Short.MAX_VALUE)
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );

@@ -82,6 +82,9 @@ public class ViewPatient extends javax.swing.JPanel {
         notheing1 = new javax.swing.JLabel();
         txtPatientId = new javax.swing.JTextField();
 
+        setForeground(new java.awt.Color(51, 51, 0));
+
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         jLabel1.setText("Exisiting Patients");
 
         tablePatient.setModel(new javax.swing.table.DefaultTableModel(
@@ -97,22 +100,49 @@ public class ViewPatient extends javax.swing.JPanel {
         ));
         jScrollPane4.setViewportView(tablePatient);
 
+        jLabel2.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 0));
         jLabel2.setText("Name");
 
+        asknfma.setBackground(new java.awt.Color(204, 204, 204));
+        asknfma.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        asknfma.setForeground(new java.awt.Color(51, 51, 0));
         asknfma.setText("Gender");
 
+        jLabel4.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel4.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 0));
         jLabel4.setText("Date of Birth");
 
+        jLabel5.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel5.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 51, 0));
         jLabel5.setText("PersonId");
 
+        jLabel6.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel6.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 51, 0));
         jLabel6.setText("Address");
 
+        jLabel7.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel7.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 51, 0));
         jLabel7.setText("City");
 
+        jLabel8.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel8.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 0));
         jLabel8.setText("State");
 
+        jLabel9.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel9.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 0));
         jLabel9.setText("Zip");
 
+        Community.setBackground(new java.awt.Color(204, 204, 204));
+        Community.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        Community.setForeground(new java.awt.Color(51, 51, 0));
         Community.setText("Community");
 
         txtPulseRate.addActionListener(new java.awt.event.ActionListener() {
@@ -121,20 +151,36 @@ public class ViewPatient extends javax.swing.JPanel {
             }
         });
 
+        txtDiagnosis.setForeground(new java.awt.Color(51, 51, 0));
         txtDiagnosis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDiagnosisActionPerformed(evt);
             }
         });
 
+        jLabel12.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel12.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 51, 0));
         jLabel12.setText("Temprature");
 
+        jLabel13.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel13.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 0));
         jLabel13.setText("BloodPressure");
 
+        jLabel14.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel14.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(51, 51, 0));
         jLabel14.setText("Pulse Rate");
 
+        jLabel15.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel15.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 0));
         jLabel15.setText("Diagnosis");
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 51, 0));
         jButton2.setText("View");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +188,7 @@ public class ViewPatient extends javax.swing.JPanel {
             }
         });
 
+        jButton3.setForeground(new java.awt.Color(51, 51, 0));
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,6 +196,9 @@ public class ViewPatient extends javax.swing.JPanel {
             }
         });
 
+        notheing1.setBackground(new java.awt.Color(204, 204, 204));
+        notheing1.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        notheing1.setForeground(new java.awt.Color(51, 51, 0));
         notheing1.setText("patientId");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -180,7 +230,7 @@ public class ViewPatient extends javax.swing.JPanel {
                                 .addComponent(txtPersonId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(80, 125, Short.MAX_VALUE)
+                        .addGap(80, 109, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel7)
@@ -212,7 +262,7 @@ public class ViewPatient extends javax.swing.JPanel {
                                         .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel14)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(txtTemp, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -287,7 +337,7 @@ public class ViewPatient extends javax.swing.JPanel {
                     .addComponent(txtPatientId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addComponent(jButton3)
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

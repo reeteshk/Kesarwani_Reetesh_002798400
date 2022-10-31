@@ -89,6 +89,9 @@ public class viewExistingPatient extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         txtDiagnosis = new javax.swing.JTextField();
 
+        ViewPersonn4.setBackground(new java.awt.Color(204, 204, 204));
+        ViewPersonn4.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        ViewPersonn4.setForeground(new java.awt.Color(51, 51, 0));
         ViewPersonn4.setText("View");
         ViewPersonn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +125,9 @@ public class viewExistingPatient extends javax.swing.JPanel {
 
         jLabel46.setText("Date of Birth:");
 
+        buttonAdd4.setBackground(new java.awt.Color(204, 204, 204));
+        buttonAdd4.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonAdd4.setForeground(new java.awt.Color(51, 51, 0));
         buttonAdd4.setText("Update");
         buttonAdd4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +145,8 @@ public class viewExistingPatient extends javax.swing.JPanel {
 
         jLabel48.setText("Perosn ID:");
 
+        jLabel49.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(51, 51, 0));
         jLabel49.setText("Existing Patient");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -148,7 +156,7 @@ public class viewExistingPatient extends javax.swing.JPanel {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(120, 120, 120)
                 .addComponent(jLabel49)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,7 +275,7 @@ public class viewExistingPatient extends javax.swing.JPanel {
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(307, 307, 307)
                         .addComponent(buttonAdd4)))
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel9Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txtBloodPressure, txtPulseRate, txtTemp});
@@ -309,7 +317,7 @@ public class viewExistingPatient extends javax.swing.JPanel {
                             .addComponent(jLabel45)
                             .addComponent(txtZip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel52))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel47)
                             .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

@@ -69,8 +69,9 @@ import model.System;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 153));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 0));
         jButton1.setText("Patient Registration");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,8 +79,9 @@ import model.System;
             }
         });
 
-        jButton5.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 153));
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(51, 51, 0));
         jButton5.setText("Person Registration");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,8 +89,9 @@ import model.System;
             }
         });
 
-        buttonView.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonView.setForeground(new java.awt.Color(0, 0, 153));
+        buttonView.setBackground(new java.awt.Color(204, 204, 204));
+        buttonView.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonView.setForeground(new java.awt.Color(51, 51, 0));
         buttonView.setText("Existing Person");
         buttonView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,8 +99,9 @@ import model.System;
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 153));
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(51, 51, 0));
         jButton6.setText("Existing Patient");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,8 +109,9 @@ import model.System;
             }
         });
 
-        buttonReturn.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonReturn.setForeground(new java.awt.Color(0, 0, 153));
+        buttonReturn.setBackground(new java.awt.Color(204, 204, 204));
+        buttonReturn.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonReturn.setForeground(new java.awt.Color(51, 51, 0));
         buttonReturn.setText("Log out");
         buttonReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,8 +119,9 @@ import model.System;
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 153));
+        jButton7.setBackground(new java.awt.Color(204, 204, 204));
+        jButton7.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(51, 51, 0));
         jButton7.setText("Hospital");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,8 +129,9 @@ import model.System;
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(0, 0, 153));
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
+        jButton9.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(51, 51, 0));
         jButton9.setText(" Doctor ");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,6 +139,9 @@ import model.System;
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 51, 0));
         jButton2.setText("Community");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,22 +153,22 @@ import model.System;
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(buttonView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton5)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jButton5)
+                    .addComponent(buttonView, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {buttonReturn, buttonView, jButton1, jButton2, jButton5, jButton6, jButton7, jButton9});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -174,12 +184,14 @@ import model.System;
                 .addComponent(jButton9)
                 .addGap(18, 18, 18)
                 .addComponent(jButton7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton2)
-                .addGap(7, 7, 7)
+                .addGap(15, 15, 15)
                 .addComponent(buttonReturn)
-                .addContainerGap(497, Short.MAX_VALUE))
+                .addContainerGap(475, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {buttonReturn, buttonView, jButton1, jButton2, jButton5, jButton6, jButton7, jButton9});
 
         jSplitPane1.setLeftComponent(jPanel1);
 

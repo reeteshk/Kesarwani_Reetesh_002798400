@@ -51,8 +51,10 @@ public class viewHospital extends javax.swing.JPanel {
         txtCommunityName2 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel1.setText("ADD Hospital");
+        jLabel1.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 0));
+        jLabel1.setText("Hospital");
 
         jLabel2.setText("Hospital Name");
 
@@ -64,6 +66,9 @@ public class viewHospital extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 0));
         jButton1.setText("ADD Hospital");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +89,9 @@ public class viewHospital extends javax.swing.JPanel {
         ));
         jScrollPane4.setViewportView(tableHospital);
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 204));
+        jButton2.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(51, 51, 0));
         jButton2.setText("View");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,6 +103,9 @@ public class viewHospital extends javax.swing.JPanel {
 
         jLabel5.setText("Community Name");
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 51, 0));
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,7 +179,7 @@ public class viewHospital extends javax.swing.JPanel {
                     .addComponent(txtCommunityName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(76, 76, 76)
                 .addComponent(jButton3)
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

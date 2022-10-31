@@ -55,8 +55,9 @@ public class HospitalFrame extends javax.swing.JFrame {
 
         jSplitPane1.setDividerLocation(150);
 
-        buttonReturn.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        buttonReturn.setForeground(new java.awt.Color(0, 0, 153));
+        buttonReturn.setBackground(new java.awt.Color(204, 204, 204));
+        buttonReturn.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        buttonReturn.setForeground(new java.awt.Color(51, 51, 0));
         buttonReturn.setText("Log out");
         buttonReturn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,8 +65,9 @@ public class HospitalFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 153));
+        jButton1.setBackground(new java.awt.Color(204, 204, 204));
+        jButton1.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 0));
         jButton1.setText("Patient Registration");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +75,9 @@ public class HospitalFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 153));
+        jButton6.setBackground(new java.awt.Color(204, 204, 204));
+        jButton6.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(51, 51, 0));
         jButton6.setText("Existing Patient");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,8 +85,9 @@ public class HospitalFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton9.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(0, 0, 153));
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
+        jButton9.setFont(new java.awt.Font("Rockwell", 0, 14)); // NOI18N
+        jButton9.setForeground(new java.awt.Color(51, 51, 0));
         jButton9.setText(" Doctor ");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,12 +121,12 @@ public class HospitalFrame extends javax.swing.JFrame {
                 .addComponent(jButton6)
                 .addGap(95, 95, 95)
                 .addComponent(buttonReturn)
-                .addContainerGap(197, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(234, 234, 234)
                     .addComponent(jButton9)
-                    .addContainerGap(264, Short.MAX_VALUE)))
+                    .addContainerGap(263, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

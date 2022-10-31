@@ -75,6 +75,11 @@ public class ViewPatient2 extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         tablePatient = new javax.swing.JTable();
 
+        jPanel9.setForeground(new java.awt.Color(51, 51, 0));
+
+        ViewPersonn4.setBackground(new java.awt.Color(204, 204, 204));
+        ViewPersonn4.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        ViewPersonn4.setForeground(new java.awt.Color(51, 51, 0));
         ViewPersonn4.setText("View");
         ViewPersonn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,14 +93,24 @@ public class ViewPatient2 extends javax.swing.JPanel {
             }
         });
 
+        jLabel40.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(51, 51, 0));
         jLabel40.setText("Address:");
 
+        jLabel41.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(51, 51, 0));
         jLabel41.setText("Name:");
 
+        jLabel42.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(51, 51, 0));
         jLabel42.setText("City:");
 
+        jLabel43.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(51, 51, 0));
         jLabel43.setText("Gender:");
 
+        jLabel44.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(51, 51, 0));
         jLabel44.setText("State:");
 
         txtPersonId.addActionListener(new java.awt.event.ActionListener() {
@@ -104,10 +119,17 @@ public class ViewPatient2 extends javax.swing.JPanel {
             }
         });
 
+        jLabel45.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(51, 51, 0));
         jLabel45.setText("Zip:");
 
+        jLabel46.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(51, 51, 0));
         jLabel46.setText("Date of Birth:");
 
+        buttonAdd4.setBackground(new java.awt.Color(204, 204, 204));
+        buttonAdd4.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        buttonAdd4.setForeground(new java.awt.Color(51, 51, 0));
         buttonAdd4.setText("Update");
         buttonAdd4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,10 +143,15 @@ public class ViewPatient2 extends javax.swing.JPanel {
             }
         });
 
+        jLabel47.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(51, 51, 0));
         jLabel47.setText("Community:");
 
+        jLabel48.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(51, 51, 0));
         jLabel48.setText("Perosn ID:");
 
+        jLabel49.setFont(new java.awt.Font("Rockwell", 0, 18)); // NOI18N
         jLabel49.setText("Existing Patient");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
@@ -141,14 +168,24 @@ public class ViewPatient2 extends javax.swing.JPanel {
             .addComponent(jLabel49, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
         );
 
+        jLabel50.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(51, 51, 0));
         jLabel50.setText("Temperature");
 
+        jLabel51.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(51, 51, 0));
         jLabel51.setText("Blood Pressure");
 
+        jLabel52.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 51, 0));
         jLabel52.setText("Pulse Rate");
 
+        jLabel53.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(51, 51, 0));
         jLabel53.setText("Diagnosis");
 
+        jLabel54.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(51, 51, 0));
         jLabel54.setText("Patient ID");
 
         tablePatient.setModel(new javax.swing.table.DefaultTableModel(
@@ -201,7 +238,8 @@ public class ViewPatient2 extends javax.swing.JPanel {
                                         .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonAdd4))
                                 .addGap(12, 12, 12)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel9Layout.createSequentialGroup()
@@ -239,9 +277,6 @@ public class ViewPatient2 extends javax.swing.JPanel {
                                         .addComponent(jLabel52)
                                         .addGap(192, 192, 192))))
                             .addComponent(jLabel48)))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(487, 487, 487)
-                        .addComponent(buttonAdd4))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(237, 237, 237)
                         .addComponent(jLabel54)
@@ -301,9 +336,9 @@ public class ViewPatient2 extends javax.swing.JPanel {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel47)
                             .addComponent(txtCommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(120, 120, 120)
+                        .addGap(48, 48, 48)
                         .addComponent(buttonAdd4)
-                        .addGap(595, 595, 595))
+                        .addGap(667, 667, 667))
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -322,7 +357,7 @@ public class ViewPatient2 extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 286, Short.MAX_VALUE))
+                .addGap(0, 269, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
