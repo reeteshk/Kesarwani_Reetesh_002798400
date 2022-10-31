@@ -32,6 +32,9 @@ NO DATABASE required - USE ArrayList or suitable DATA STRUCTURES for the DIRECTO
 
 Panels - At least 5 panels required: System Administrator, Doctor, Patient, Community Admin and Hospital Admin
 
+![Sequence diagram](https://user-images.githubusercontent.com/114504936/198927566-56c75c72-c4f0-4894-a7de-1cd6fef552cc.png)
+
+
 CRUD can be implemented in the same panel - e.g: A Hospital Administrator can perform all CRUD operations on Doctors in the same panel
 UNIQUE ID - for a person, doctor, encounter wherever valid is necessary
 follow camel convention
