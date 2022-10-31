@@ -32,7 +32,7 @@ NO DATABASE required - USE ArrayList or suitable DATA STRUCTURES for the DIRECTO
 
 Panels - At least 5 panels required: System Administrator, Doctor, Patient, Community Admin and Hospital Admin
 
-![Sequence diagram](https://user-images.githubusercontent.com/114504936/198927566-56c75c72-c4f0-4894-a7de-1cd6fef552cc.png)
+
 
 
 CRUD can be implemented in the same panel - e.g: A Hospital Administrator can perform all CRUD operations on Doctors in the same panel
@@ -55,6 +55,9 @@ Class Diagram
 
 ![class diagram](https://user-images.githubusercontent.com/114504936/198924968-00e43ed4-5f90-4e79-aaeb-861281a3ca37.jpeg)
 
+Sequence Diagram
+
+![Sequence diagram](https://user-images.githubusercontent.com/114504936/198927566-56c75c72-c4f0-4894-a7de-1cd6fef552cc.png)
 
 
 How This Application works
