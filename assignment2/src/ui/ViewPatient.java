@@ -81,6 +81,7 @@ public class ViewPatient extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         notheing1 = new javax.swing.JLabel();
         txtPatientId = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
 
         setForeground(new java.awt.Color(51, 51, 0));
 
@@ -201,6 +202,16 @@ public class ViewPatient extends javax.swing.JPanel {
         notheing1.setForeground(new java.awt.Color(51, 51, 0));
         notheing1.setText("patientId");
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(51, 51, 0));
+        jButton4.setText("Delete");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -213,6 +224,8 @@ public class ViewPatient extends javax.swing.JPanel {
                             .addComponent(jScrollPane4)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
@@ -230,7 +243,7 @@ public class ViewPatient extends javax.swing.JPanel {
                                 .addComponent(txtPersonId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(80, 109, Short.MAX_VALUE)
+                        .addGap(80, 108, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel7)
@@ -296,7 +309,9 @@ public class ViewPatient extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(jButton2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton4))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -379,7 +394,7 @@ public class ViewPatient extends javax.swing.JPanel {
         selected_row[12] = txtDiagnosis.getText();*/
         selected_row[9] = Integer.valueOf(txtPatientId.getText());
         
-        Date resultdate = new Date(System.currentTimeMillis());
+        Date resultdate = null;
         City city = new City(selected_row[5].toString());
         String community = selected_row[8].toString();
         VitalSigns vs = new VitalSigns(0,0,0);
@@ -423,12 +438,46 @@ public class ViewPatient extends javax.swing.JPanel {
         txtPatientId.setText(String.valueOf(patient.getPatientId()));
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        int row_selected = tablePatient.getSelectedRow();
+
+        if (row_selected < 0) {
+            JOptionPane.showMessageDialog(this, "Please Select a row to delete.");
+            return;
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
+        patientDirectory.deletePatient(model.getValueAt(row_selected, 9).toString());
+        JOptionPane.showMessageDialog(this, "Patient deleted successfully");
+        
+        populateTable2();
+        
+        txtName.setText("");
+        txtGender.setText("");
+        txtDate.setText("");
+        txtPersonId.setText("");
+        txtAddress.setText("");
+        txtCity.setText("");
+        txtState.setText("");
+        txtZip.setText("");
+        txtCommunity.setText("");
+        txtPatientId.setText("");
+        txtTemp.setText("");
+        txtTemp.setText("");
+        txtBloodPressure.setText("");
+        txtPulseRate.setText("");
+        txtDiagnosis.setText("");
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Community;
     private javax.swing.JLabel asknfma;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

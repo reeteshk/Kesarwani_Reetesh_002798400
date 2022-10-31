@@ -354,7 +354,7 @@ public class CreatePatient extends javax.swing.JPanel {
         }
 
         
-        Date resultdate = new Date(System.currentTimeMillis());
+        Date resultdate = null;
         DefaultTableModel model = (DefaultTableModel) tablePerson.getModel();
 
         Person person = personDirectory.getPerson(model.getValueAt(selectedRow, 0).toString());

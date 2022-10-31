@@ -88,6 +88,12 @@ public class doctorpatientView extends javax.swing.JPanel {
 
         jLabel2.setText("patient ID");
 
+        txtPatientId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPatientIdActionPerformed(evt);
+            }
+        });
+
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
         jButton1.setFont(new java.awt.Font("Rockwell", 0, 13)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 0));
@@ -141,13 +147,13 @@ public class doctorpatientView extends javax.swing.JPanel {
 
         tablePatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Name", "Gender", "Date of Birth", "Person ID", "Address", "City", "State", "Zip", "Community", "Patient ID"
+                "Name", "Gender", "Date of Birth", "Person ID", "Address", "City", "State", "Zip", "Community", "Patient ID", "Date of Enc"
             }
         ));
         jScrollPane4.setViewportView(tablePatient);
@@ -300,37 +306,40 @@ public class doctorpatientView extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        // TODO add your handling code here:
-        int row_selected = tablePatient.getSelectedRow();
-
-        if (row_selected < 0) {
-            JOptionPane.showMessageDialog(this, "Please Select a row to view details.");
+        if (txtPatientId.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Please Enter Community to filter");
             return;
         }
-
-        DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
-        Patient patient = patientDirectory.getPatient(model.getValueAt(row_selected, 0).toString());
-        House house = patient.getHouse();
-        String comm = house.getCommunity();
-        City city = house.getCity();
-
-        txtName.setText(patient.getName());
-        txtGender.setText(patient.getGender());
-        txtDate.setText(patient.getDob());
-        txtPersonId.setText(String.valueOf(patient.getId()));
-        txtAddress.setText(house.getAddress());
-        txtCity.setText(city.getCityName());
-        txtState.setText(house.getState());
-        txtZip.setText(String.valueOf(house.getPin()));
-        txtCommunity.setText(comm);
-        txtPatientId.setText(String.valueOf(patient.getPatientId()));
-        txtPulseRate.setText(String.valueOf(patient.getEncounter().getVitalSign().getPulseRate()));
-        txtBloodPressure.setText(String.valueOf(patient.getEncounter().getVitalSign().getBloodPressure()));
-        txtTemp.setText(String.valueOf(patient.getEncounter().getVitalSign().getTemp()));
-        
-        
+        PatientDirectory doctorDirectory1 = patientDirectory.idFilter(Integer.parseInt(txtPatientId.getText()));
+        populateTable2(doctorDirectory1);
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void txtPatientIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPatientIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPatientIdActionPerformed
+private void populateTable2(PatientDirectory doctorDirectory1) {
+        
+        DefaultTableModel model = (DefaultTableModel) tablePatient.getModel();
+        model.setRowCount(0);
+        
+        for(Patient person : doctorDirectory1.getPatients()){
+            
+            Object[] data = new Object[10];
+            data[0] = person.getName();
+            data[1] = person.getGender();
+            data[2] = person.getDob();
+            data[3] = person.getId();
+            data[4] = person.getHouse().getAddress();
+            data[5] = person.getHouse().getCity().getCityName();
+            data[6] = person.getHouse().getState();
+            data[7] = person.getHouse().getPin();
+            data[8] = person.getHouse().getCommunity();
+            data[9] = person.getPatientId();
+            
+            model.addRow(data);
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Community;
